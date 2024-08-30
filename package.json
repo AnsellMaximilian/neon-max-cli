@@ -1,0 +1,31 @@
+{
+  "name": "neon-max-cli",
+  "version": "1.0.1",
+  "main": "index.js",
+  "bin": {
+    "neonmax": "dist/index.js"
+  },
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "build": "tsc"
+  },
+  "keywords": [
+    "CLI",
+    "Next.js",
+    "Neon",
+    "Starter Kit"
+  ],
+  "author": "Ansell Maximilian",
+  "license": "MIT",
+  "description": "CLI for Neon Max Next.js OSS Starter Kit",
+  "dependencies": {
+    "commander": "^12.1.0",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.17.7",
+    "@types/node": "^22.5.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  }
+}
