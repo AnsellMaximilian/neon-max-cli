@@ -11,13 +11,13 @@ function toSnakeCasePlural(modelName: string): string {
 function generatePrismaModelContent(modelName: string): string {
   const snakeCasePlural = toSnakeCasePlural(modelName);
   return `model ${modelName} {
+  @@map("${snakeCasePlural}")
+
   id        String   @id @default(cuid())
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
   // Add your fields here
-
-  @@map("${snakeCasePlural}")
 }`;
 }
 
