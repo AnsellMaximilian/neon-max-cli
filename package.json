@@ -20,7 +20,8 @@
   "description": "CLI for Neon Max Next.js OSS Starter Kit",
   "dependencies": {
     "commander": "^12.1.0",
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "simple-git": "^3.25.0"
   },
   "devDependencies": {
     "@types/lodash": "^4.17.7",

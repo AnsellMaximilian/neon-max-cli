@@ -2,6 +2,7 @@
 
 import { Command } from "commander";
 import { generateModel } from "./commands/generateModel";
+import { init } from "./commands/init";
 
 const program = new Command();
 
@@ -17,6 +18,14 @@ program
   .option("-a, --action", "Generate a camelCase file under actions/ directory")
   .action((modelName, options) => {
     generateModel(modelName, options);
+  });
+
+// Initialize NeonMax Starter Kit
+program
+  .command("init <project-name>")
+  .description("Initialize a new project by cloning the Neon Max starter kit")
+  .action((projectName) => {
+    init(projectName);
   });
 
 program.parse(process.argv);
