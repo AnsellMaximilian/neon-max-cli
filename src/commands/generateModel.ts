@@ -14,8 +14,8 @@ function generatePrismaModelContent(modelName: string): string {
   @@map("${snakeCasePlural}")
 
   id        String   @id @default(cuid())
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  createdAt DateTime @default(now())  @map("created_at")
+  updatedAt DateTime @updatedAt       @map("updated_at")
 
   // Add your fields here
 }`;
