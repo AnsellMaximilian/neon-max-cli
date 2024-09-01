@@ -29,7 +29,9 @@ function generateActionFile(modelName: string) {
     `actions/${camelCaseName}.ts`
   );
 
-  const actionFileContent = `import { PrismaClient } from '@prisma/client';
+  const actionFileContent = `"use server";
+  
+  import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
 
